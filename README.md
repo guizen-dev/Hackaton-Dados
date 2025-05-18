@@ -13,32 +13,63 @@
 
 ---
 
-## 🟦 Sprint 1 – Coleta e limpeza de dados
-📆 **Período:** 19 a 25 de maio  
-🎯 **Objetivo:** Obter todas as bases, limpar nomes de regiões e padronizar formatos  
-
-### 🔹 Tarefas por pessoa
-
-**👤 Pessoa 1 – Gestor de dados**
-- [ ] Baixar base do SISU da UFABC (nome, curso, nota, município)
-- [ ] Padronizar nomes de municípios (sem acento, siglas, etc)
-- [ ] Criar dicionário de dados `documentacao/dicionario_bases.md`
-
-**👤 Pessoa 2 – Geodados**
-- [ ] Baixar shapefiles dos bairros de SP, Santo André, São Bernardo
-- [ ] Baixar linhas de ônibus, metrô e trem (GeoSampa / SIGA)
-- [ ] Testar visualizações no QGIS ou Kepler.gl
-
-**👤 Pessoa 3 – ENEM / Ensino Médio**
-- [ ] Baixar microdados ENEM e Censo Escolar (2022–2023)
-- [ ] Criar amostra da região do ABC
-- [ ] Padronizar colunas principais: nota, escola, localização
-
-**👤 Pessoa 4 – Mobilidade e Desigualdade**
-- [ ] Baixar dados do IBGE: população jovem, renda, escolaridade
-- [ ] Criar base por bairro/município com essas variáveis
+## 🟦 Sprint 1 – Coleta e limpeza de dados  
+📆 Período: 19 a 25 de maio  
+🎯 Objetivo: Obter todas as bases, limpar nomes de regiões e padronizar formatos  
 
 ---
+
+### 👤 Pessoa 1 – Gestor de Dados + Apoio ao ENEM  
+🕒 Carga estimada: ~6h  
+- [ ] Baixar base do SISU da UFABC (nome, curso, nota, município)  
+- [ ] Padronizar nomes de municípios (acentos, siglas etc)  
+- [ ] Criar dicionário de dados `documentacao/dicionario_bases.md`  
+- [ ] Criar pasta e estrutura de dados padronizada (data/raw, data/processed etc)  
+- [ ] Baixar microdados do ENEM (CSV ou TXT + Dicionário) **[apoio à Pessoa 3]**  
+- [ ] Criar script de leitura/parsing inicial dos microdados (pandas, pyarrow)
+
+---
+
+### 👤 Pessoa 2 – Geodados + Apoio a Mobilidade  
+🕒 Carga estimada: ~6h  
+- [ ] Baixar shapefiles dos bairros de SP, Santo André e São Bernardo  
+- [ ] Baixar linhas de ônibus, metrô e trem (GeoSampa e SIGA)  
+- [ ] Testar visualização básica no QGIS ou Kepler.gl  
+- [ ] Identificar variáveis geográficas para cruzamento (nome do bairro, ID, coordenadas)  
+- [ ] Baixar e organizar camadas base (vias, transporte público, linhas férreas etc)  
+- [ ] Criar preview de mapa base com bairros + infraestrutura de transporte
+
+---
+
+### 👤 Pessoa 3 – ENEM / Ensino Médio  
+🕒 Carga estimada: ~6h  
+- [ ] Filtrar candidatos da região do ABC nos microdados do ENEM (com apoio da Pessoa 1)  
+- [ ] Padronizar colunas principais: nota, tipo de escola, localização  
+- [ ] Cruzar município de residência com codificação dos dados do ENEM  
+- [ ] Baixar e filtrar dados do Censo Escolar (2022–2023) para escolas do ABC  
+- [ ] Identificar escolas com maior número de participantes do ENEM
+
+---
+
+### 👤 Pessoa 4 – Mobilidade e Desigualdade  
+🕒 Carga estimada: ~6h  
+- [ ] Baixar dados do IBGE:  
+  - População jovem (15–19 anos)  
+  - Renda média domiciliar  
+  - Escolaridade média  
+- [ ] Agregar os dados por bairro/município (usar pandas ou QGIS)  
+- [ ] Iniciar base estruturada com variáveis socioeconômicas por região  
+- [ ] Verificar compatibilidade entre dados do IBGE e shapefiles (IDs, nomes)
+
+---
+
+📌 **Resultado esperado da Sprint 1:**
+- Bases brutas coletadas e parcialmente tratadas
+- Estrutura de pastas padronizada
+- Nomes de cidades e regiões normalizados
+- Dicionário de dados iniciado
+- Primeiros mapas de teste com regiões e transporte
+
 
 ## 🟩 Sprint 2 – Análise exploratória e cruzamentos iniciais
 📆 **Período:** 26 de maio a 01 de junho  
