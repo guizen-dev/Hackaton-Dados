@@ -25,7 +25,7 @@
 - [ ] Padronizar nomes de municípios (acentos, siglas etc)  
 - [ ] Criar dicionário de dados `documentacao/dicionario_bases.md`  
 - [ ] Criar pasta e estrutura de dados padronizada (data/raw, data/processed etc)  
-- [ ] Baixar microdados do ENEM (CSV ou TXT + Dicionário) **[apoio à Pessoa 3]**  
+- [ ] Baixar dados do ENEM/Sisu (CSV ou TXT + Dicionário) **[apoio à Pessoa 3]**  
 - [ ] Criar script de leitura/parsing inicial dos microdados (pandas, pyarrow)
 
 ---
@@ -43,9 +43,9 @@
 
 ### 👤 Pessoa 3 – ENEM / Ensino Médio  
 🕒 Carga estimada: ~6h  
-- [ ] Filtrar candidatos da região do ABC nos microdados do ENEM (com apoio da Pessoa 1)  
+- [ ] Filtrar candidatos da região do ABC nos dados do ENEM/Sisu (com apoio da Pessoa 1)  
 - [ ] Padronizar colunas principais: nota, tipo de escola, localização  
-- [ ] Cruzar município de residência com codificação dos dados do ENEM  
+- [ ] Cruzar município de residência com codificação dos dados do ENEM/Sisu  
 - [ ] Baixar e filtrar dados do Censo Escolar (2022–2023) para escolas do ABC  
 - [ ] Identificar escolas com maior número de participantes do ENEM
 
