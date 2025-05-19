@@ -13,10 +13,10 @@
 
 ---
 
-## 👤 Pessoa 1 – Gestor de Dados + Infra de Arquivos
+## 👤 Pessoa 1 – Gestor de Dados + Apoio ao ENEM
 🕒 ~6h
-- [ ] Baixar base do SISU completa (ZIP), mas extrair e filtrar só SP ou ABC  
-- [ ] Padronizar nomes de municípios (acentos, siglas etc)  
+- [ ] Baixar base do SISU (nome, curso, nota, município), extrair e filtrar só SP ou ABC (apoio à pessoa 3)
+- [ ] Padronizar nomes de municípios (sem acento, siglas, etc)
 - [ ] Estruturar Google Drive com:  
   - `/raw/` para arquivos originais  
   - `/sample/` para amostras leves  
@@ -26,37 +26,38 @@
 
 ---
 
-## 👤 Pessoa 2 – Geodados + Mapas Base
+## 👤 Pessoa 2 – Geodados + Apoio a Mobilidade  
 🕒 ~6h
 - [ ] Baixar shapefiles de SP, Santo André, São Bernardo  
 - [ ] Baixar dados de transporte (ônibus, metrô, trem - GeoSampa/SIGA)  
-- [ ] Criar mapa base em QGIS ou Kepler.gl com:  
+- [ ] Identificar variáveis geográficas para cruzamento (nome do bairro, ID, coordenadas)  
+- [ ] Baixar e organizar camadas base (vias, transporte público, linhas férreas etc)  
+- [ ] Criar preview de mapa base com bairros + infraestrutura de transporte
   - Bairros + UFABC + Linhas de transporte  
-- [ ] Exportar `.geojson` ou `.png` com preview do mapa  
 - [ ] Subir para o Drive na pasta `/mapas_base/` com legenda + fontes  
 
 ---
 
-## 👤 Pessoa 3 – ENEM e Censo Escolar
+## 👤 Pessoa 3 – ENEM / Ensino Médio 
 🕒 ~6h
-- [ ] Baixar microdados do ENEM (apenas SP ou ABC)  
-- [ ] Criar amostra reduzida (com 1–2% dos dados ou só do ABC)  
-- [ ] Padronizar colunas principais: nota, tipo de escola, localização  
-- [ ] Baixar dados do Censo Escolar 2022–2023  
-- [ ] Identificar escolas com maior nº de participantes do ENEM  
+- [ ] Filtrar candidatos da região do ABC nos microdados do ENEM (com apoio da Pessoa 1)  
+- [ ] Padronizar colunas principais: nota, tipo de escola, localização
+- [ ] Cruzar município de residência com codificação dos dados do ENEM  
+- [ ] Baixar e filtrar dados do Censo Escolar (2022–2023) para escolas do ABC  
+- [ ] Identificar escolas com maior número de participantes do ENEM
 - [ ] Subir amostras para o Drive + salvar dicionário de colunas usadas  
 
 ---
 
-## 👤 Pessoa 4 – IBGE + Indicadores Sociais
-🕒 ~6h
+### 👤 Pessoa 4 – Mobilidade e Desigualdade  
+🕒 Carga estimada: ~6h  
 - [ ] Baixar dados do IBGE:  
-  - População jovem (15–19)  
-  - Renda média  
-  - Escolaridade  
-- [ ] Cruzar dados por bairro ou município (usar códigos IBGE)  
-- [ ] Criar CSV leve com indicadores por região (ABC/SP)  
-- [ ] Subir base no Drive + documentar origem e granularidade  
+  - População jovem (15–19 anos)  
+  - Renda média domiciliar  
+  - Escolaridade média  
+- [ ] Agregar os dados por bairro/município (usar pandas ou QGIS)  
+- [ ] Iniciar base estruturada com variáveis socioeconômicas por região  
+- [ ] Verificar compatibilidade entre dados do IBGE e shapefiles (IDs, nomes)
 
 📌 **Resultado esperado da Sprint 1:**
 - Bases brutas coletadas e parcialmente tratadas
